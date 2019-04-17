@@ -45,7 +45,6 @@ abstract class BaseRecyclerViewAdapter<T, VH : RecyclerView.ViewHolder> : Recycl
         notifyItemRemoved(position)
     }
 
-
     interface ItemOnClickListener<T> {
         fun onItemClick(t: T, position: Int)
     }
