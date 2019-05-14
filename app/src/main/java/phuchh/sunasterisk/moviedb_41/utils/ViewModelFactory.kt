@@ -35,7 +35,7 @@ class ViewModelFactory private constructor(
         with(modelClass) {
             when {
                 isAssignableFrom(MainViewModel::class.java) ->
-                    MainViewModel(movieRepository)
+                    MainViewModel()
                 isAssignableFrom(HomeViewModel::class.java) ->
                     HomeViewModel(movieRepository)
                 else ->
