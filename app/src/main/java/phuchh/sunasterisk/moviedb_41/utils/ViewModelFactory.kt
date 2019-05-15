@@ -5,6 +5,7 @@ import android.app.Application
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
 import android.support.annotation.VisibleForTesting
+import phuchh.sunasterisk.moviedb_41.data.repository.MovieRepository
 import phuchh.sunasterisk.moviedb_41.ui.home.HomeViewModel
 import phuchh.sunasterisk.moviedb_41.ui.main.MainViewModel
 

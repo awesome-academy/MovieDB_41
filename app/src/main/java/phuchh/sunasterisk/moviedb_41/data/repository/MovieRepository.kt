@@ -9,6 +9,7 @@ import phuchh.sunasterisk.moviedb_41.data.model.response.GenreResponse
 import phuchh.sunasterisk.moviedb_41.data.model.response.MovieResponse
 import phuchh.sunasterisk.moviedb_41.data.source.local.MovieLocalDataSource
 import phuchh.sunasterisk.moviedb_41.data.source.remote.MovieRemoteDataSource
+import phuchh.sunasterisk.moviedb_41.utils.StringUtils
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -37,6 +38,8 @@ class MovieRepository private constructor(
     fun getPlayingMovies(): LiveData<ApiResponse<List<Movie>>> = fetchMovies(remote.getPlayingMovies())
 
     fun getTopMovies(): LiveData<ApiResponse<List<Movie>>> = fetchMovies(remote.getTopMovies())
+
+    fun getUpComingMovies(): LiveData<ApiResponse<List<Movie>>> = fetchMovies(remote.getComingMovies())
 
     fun getMoviesTrendingByDay(): LiveData<ApiResponse<List<Movie>>> = fetchMovies(remote.getMoviesTrendingByDay())
 
