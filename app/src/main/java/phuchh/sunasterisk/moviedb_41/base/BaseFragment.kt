@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import phuchh.sunasterisk.moviedb_41.BR
 
 abstract class BaseFragment<VB : ViewDataBinding, VM : BaseViewModel> : Fragment() {
 
@@ -33,7 +34,7 @@ abstract class BaseFragment<VB : ViewDataBinding, VM : BaseViewModel> : Fragment
     }
 
     abstract fun initComponent(
-        viewBinding: ViewDataBinding,
+        viewBinding: VB,
         savedInstanceState: Bundle?
     )
 }
