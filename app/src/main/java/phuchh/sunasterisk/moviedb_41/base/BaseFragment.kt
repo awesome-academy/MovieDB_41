@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import phuchh.sunasterisk.moviedb_41.BR
 
 abstract class BaseFragment<VB : ViewDataBinding, VM : BaseViewModel> : Fragment() {
@@ -32,6 +33,8 @@ abstract class BaseFragment<VB : ViewDataBinding, VM : BaseViewModel> : Fragment
             executePendingBindings()
         }
     }
+
+    fun showToast(msg: String) = Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
 
     abstract fun initComponent(
         viewBinding: VB,
