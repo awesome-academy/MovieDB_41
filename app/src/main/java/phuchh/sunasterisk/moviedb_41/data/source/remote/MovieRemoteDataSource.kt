@@ -32,7 +32,7 @@ class MovieRemoteDataSource private constructor(private val apiRequest: ApiReque
     }
 
     override fun getPlayingMovies(): Call<MovieResponse> {
-        return apiRequest.getComingMovies()
+        return apiRequest.getPlayingMovies()
     }
 
     override fun getTopMovies(): Call<MovieResponse> {
